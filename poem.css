@@ -1,0 +1,90 @@
+body {
+    background: rgb(238, 242, 243);
+    box-sizing: border-box;
+}
+.container {
+    background: rgb(238, 242, 243);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+#poem {
+    width: 50%;
+    background: white;
+    box-shadow: 0 1px 10px rgba(104, 104, 104, 0.8);
+    font-family: cursive;
+    box-sizing: border-box;
+    
+    
+}
+h1 {
+    width: 100%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+
+hr {
+    width: 90%;
+    opacity: 0.3;
+    margin-top: 0;
+}
+#note {
+    /* font-style: oblique; */
+    font-size: smaller;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 15px;
+}
+
+p {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    font-family: cursive;
+    background: palegreen;
+    margin-bottom: 0;
+    height: 40px;
+}
+
+@media (max-width: 1000px){
+    #poem {
+        width: 70%;
+        background: white;
+        box-shadow: 0 1px 10px rgba(104, 104, 104, 0.8);
+        font-family: cursive;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        
+    }
+    p {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center ;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+@media (max-width: 600px){
+    #poem {
+        width: 90%;
+        background: white;
+        box-shadow: 0 1px 10px rgba(104, 104, 104, 0.8);
+        font-family: cursive;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        
+    }
+    p {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center ;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}

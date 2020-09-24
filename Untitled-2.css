@@ -1,0 +1,95 @@
+body{
+    /* background: url("C:\\Users\\USER\\Pictures\\Penguins.jpg"); */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div img{
+    width: 20%;
+    height: 10rem;
+}
+
+#body{
+    /* display: grid;
+    grid-template-columns: 1fr 300px;
+    padding: 10px; */
+    width: 100%;
+}
+
+
+#menu{
+    width: 100%;
+    height: 40px;
+    background: #000000;
+    color: white;
+    display: grid;
+    grid-template-columns: (6, 1fr);
+    align-items: center;
+    
+}
+#menu ul{
+    list-style: none;
+    line-height: normal;
+    padding: 0px 0px 0px 0px;
+    margin: 0;
+}
+#menu li{
+    float: left;
+    width: 8%;
+    margin-left: 40px;
+}
+#menu li a{
+    text-decoration: none;
+    color: white;
+}
+
+ul{
+    list-style: outside;
+}
+ li a{
+    text-decoration: none;
+    color: black;
+}
+
+#sidebar{
+    /* display: grid;
+    grid-template-rows: repeat(4, 1fr); */
+    float: left;
+    width: 30%;
+}
+
+#section{
+    /* display: grid;
+    grid-template-rows: repeat(3, 1fr); */
+    margin-right: 30px; 
+    float: left;
+    width: 65%;
+}
+img{
+    float: left;
+    padding: 0px 20px 10px 0px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+#section p{
+    text-align: justify;
+}
+
+@media(max-width: 635px){
+    #wrapper{
+        width: 100%;
+    }
+    div img{
+        width: 20%;
+    }
+    #section{
+        width: 62%;
+    }
+    #sidebar{
+        width: 25%;
+    }
+}

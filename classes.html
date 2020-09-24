@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // class Person {
+        //     constructor(name, age, job) {
+        //         this.name = name,
+        //         this.age = age,
+        //         this.job = job
+        //     }
+
+            // yearOfBirth() {
+            //     return 2020 - this.age
+            // }
+
+            // sentence() {
+            //     console.log("My name is " + this.name + ", I was born " + this.age + " and I am a " + this.job);
+            // }
+        // }
+
+        // Person.prototype.money = function() {
+        //         console.log("My name is " + this.name + ", I was born " + this.age + " and I am a " + this.job);
+
+        // }
+
+        // class Oga extends Person {
+        //     constructor(name, age, job, netWorth, houses, jobExperience) {
+        //         super(name, age, job)
+        //         this.netWorth = netWorth,
+        //         this.houses = houses,
+        //         this.jobExperience = jobExperience
+        //     }
+        // }
+
+        // let john = new Person ('John', 20, 'developer')
+        // let james = new Person ('James', 30, 'teacher')
+        // let jane = new Person ('Jane', 27, 'designer')
+
+        // let xeem = new Oga ('Xeem', 20, 'developer', '$'+1000000, 7, 12 + 'years')
+        // console.log(xeem);
+        
+        
+        // john.sentence()
+        // james.sentence()
+        // jane.sentence()
+        
+
+        // console.log(john.yearOfBirth());
+        // console.log(james.yearOfBirth());
+        // console.log(jane.yearOfBirth());
+        
+        // class Animal {
+        //     constructor(name){
+        //         this.name = name
+        //     }
+
+        //     makeSound() {
+        //         console.log('All animals make sound');
+                
+        //     }
+        // }
+
+        // class Dog extends Animal {
+        //     constructor(name){
+        //         super(name)
+        //     }
+
+        //     makeSound() {
+        //         console.log(this.name + " barks");
+                
+        //     }
+        // }
+
+        // let dog = new Dog ("Doggy")
+        // dog.makeSound()
+
+        // class Square {
+        //     constructor (width) {
+        //         this.width = width,
+        //         this.height = width
+        //     }
+        //     get area () {
+        //         return this.width * this.height
+        //     }
+
+        //     set area (area) {
+        //         this.width = Math.sqrt(area),
+        //         this.height = this.width
+        //     }
+        // }
+
+        // let cube = new Square(12)
+        // cube.area = 144
+        // console.log(cube.width);
+        // console.log(cube.height);
+        
+
+        function Vehicle(name) {
+            this.name = "Vehicle"
+        }
+
+        Vehicle.prototype = {
+            drive: function() {
+                return this.name + " drives forward"
+            },
+
+            stop: function() {
+                return this.name + " stops"
+            }
+        }
+
+        function Truck (name) {
+            this.name = name
+        }
+
+        Truck.prototype = new Vehicle()
+        Truck.prototype.constructor = Truck
+
+        Truck.prototype.drive = function() {
+            var driveMsg = Vehicle.prototype.drive.apply(this)
+
+            return driveMsg += " through the field"
+        }
+
+        var jeep = new Truck("Jeep")
+
+        console.log(jeep.drive());
+        console.log(jeep.stop());
+        
+
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+.div{
+    display: grid;
+    grid-template-rows: 192px 100%;
+    grid-template-columns: 16% minmax(min-content, 84%);
+    grid-gap: 5px;
+
+    height: 800px;
+    width: 100%;
+
+    
+}
+.d1{
+    background-color: rgba(161, 161, 194, 0.5);
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    z-index: 2;
+    
+}
+.d2{
+    background-color: rgba(0, 0, 0, 0.8);
+    grid-row: 1/-1;
+    grid-column: 1/2;
+    height: 100%;
+    color: white;
+    text-align: center;
+}
+.d3{
+    background-color: white;
+    grid-row: 2/-1;
+    grid-column: 2/-1;
+}
+#csf{
+    margin-top: 20px;
+    font-size: large;
+}
+#vine{
+    margin-top: -32px;
+    justify-content: center;
+}
+#the{
+    margin-top: 110px;
+    font-size: xx-large;
+    text-align: center;
+}

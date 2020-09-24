@@ -1,0 +1,22 @@
+{
+    "person": [
+        {
+            "name": "xeem",
+            "age": 20,
+            "favColor": "blue",
+            "department": "pharmacy"
+        },
+        {
+            "name": "Bu-ike",
+            "age": 21,
+            "favColor": "black",
+            "department": "mechatronic engineering"
+        },
+        {
+            "name": "Buchi",
+            "age": 30,
+            "favColor": "red",
+            "department": "psychology"
+        }
+    ]
+}

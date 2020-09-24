@@ -1,0 +1,59 @@
+<div class="form-container" id="form-container">
+    <div class="form-header">
+        <h2>Registration Form</h2>
+    </div>
+    <form class="form-horizontal" role="form" id="myform">
+        <input type="hidden" name="_csrf" value="{{csrf}}">
+        <div class="form-group">
+            <label for="fieldName" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="fieldName" name="name"></div>
+        </div>
+        <div class="form-group">
+            <label for="fieldEmail" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-8">
+                <input type="email" class="form-control" required id="fieldEmail" name="email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="fieldDepartment" class="col-sm-2 control-label">Department</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="fieldName" name="department"></div>
+        </div>
+        <div class="col-sm-offset-2 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-lg">Register</button>
+        </div>
+</div>
+</form>
+</div>
+<script>
+    document.getElementById('myform')
+        .addEventListener('submit', evt => {
+            evt.preventDefault()
+            const form = evt.target
+            const body = JSON.stringify({
+                _csrf: form.elements._csrf.value,
+                name: form.elements.name.value,
+                email: form.elements.email.value,
+                department: form.elements.department.value,
+            })
+            const headers = { 'Content-Type': 'application/json' }
+            const container =
+                document.getElementById('form-container')
+            fetch('/api/form', {
+                method: 'post', body,
+                headers
+            })
+                .then(resp => {
+                    if (resp.status < 200 || resp.status >= 300)
+                        throw new Error(`Request failed with status ${resp.status}`)
+                    return resp.json()
+                })
+                .then(json => {
+                    container.innerHTML = '<b>Thank you for signing up!</b > '
+                })
+                .catch(err => {
+                    container.innerHTML = `<b>We're sorry, we had a problem ` + `signing you up. Please <a href="/newsletter">try again</a>`
+                })
+        })
+</script>

@@ -1,0 +1,12 @@
+.main-head {
+    display: flex;
+    justify-content: center;
+    color: red;
+    margin: 1% 4% 4% 4%;
+
+}
+
+.form-header {
+    display: flex;
+    justify-content: center;
+}

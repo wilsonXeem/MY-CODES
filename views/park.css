@@ -1,0 +1,15 @@
+header {
+    display: flex;
+    justify-content: center;
+    color: blue;
+}
+
+img {
+    height: 80px;
+    width: 80px;
+}
+
+#park-header {
+    display: flex;
+    justify-content: center;
+}

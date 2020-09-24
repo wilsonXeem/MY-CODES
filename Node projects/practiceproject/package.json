@@ -1,0 +1,29 @@
+{
+  "name": "practiceproject",
+  "version": "1.0.0",
+  "description": "practice express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wilsonxeem",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-redis": "^5.0.0",
+    "cookie-parser": "^1.4.5",
+    "csurf": "^1.11.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.0.0",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.9.24",
+    "morgan": "^1.10.0",
+    "pg": "^8.3.0",
+    "pug": "^3.0.0",
+    "vhost": "^3.0.2"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0",
+    "portfinder": "^1.0.26"
+  }
+}

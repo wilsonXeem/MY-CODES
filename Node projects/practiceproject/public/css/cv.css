@@ -1,0 +1,121 @@
+html{
+    box-sizing: border-box;
+    background: rgb(238, 242, 243);
+}
+
+#img{
+    background-image: url("IMG_20190527_112324.jpg");
+    background-size: cover  ;
+    background-repeat: no-repeat;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+}
+
+.containers {
+    display: grid;
+    /* grid-template-columns: 30% 1fr; */
+    /* grid-template-rows: 1fr 1fr 15%; */
+    grid-template-areas: "personInfo sub-cont";
+    grid-gap: 15px;
+    margin: 10px 5px;
+}
+
+.sub-cont {
+    display: grid;
+    grid-row-gap: 20px;
+    /* width: 55%; */
+    grid-area: sub-cont;
+}
+
+.personalInfo {
+    background: white;
+    box-shadow: 0 1px 10px rgba(104, 104, 104, 0.8);
+    /* width: 100%; */
+    grid-area: personInfo;
+}
+
+.progress-container {
+    width: 100%;
+    height: 18px;
+    background: #ccc;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.progress-bar {
+    height: 18px;
+    background: #6986f0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#work {
+    background: white;
+    box-shadow: 0 1px 10px rgba(104, 104, 104, 0.8);
+}
+
+#education {
+    background: white;
+    box-shadow: 0 1px 10px rgba(104, 104, 104, 0.8);
+}
+
+hr {
+    opacity: 0.3;
+}
+
+footer {
+    width: 100%;
+    background: #6986f0;
+    height: 80px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+@media (max-width: 750px){
+
+    #img{
+        background-image: url("IMG_20190527_112324.jpg");
+        background-size: cover;
+        background-position-y: initial;
+        background-repeat: no-repeat;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: white;
+    }
+
+    .containers {
+        display: grid;
+        /* grid-template-columns: 30% 1fr; */
+        /* grid-template-rows: 1fr 1fr 15%; */
+        grid-template-areas: "personInfo"
+                             "sub-cont";
+        grid-gap: 15px;
+        margin: 10px 5px;
+    }
+    
+    .sub-cont {
+        display: grid;
+        grid-row-gap: 20px;
+        /* width: 55%; */
+        grid-area: sub-cont;
+    }
+    
+    .personalInfo {
+        background: white;
+        box-shadow: 0 1px 10px rgba(104, 104, 104, 0.8);
+        /* width: 35%; */
+        grid-area: personInfo;
+    }
+}

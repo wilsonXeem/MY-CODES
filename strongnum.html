@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <p>Calculating Strong Numbers</p>
+        From 1 to:
+        <input type="text" id="input">
+        <input type="button" value="start" onclick="myFunction()">
+        <p id="result"></p>
+    </div>
+
+
+    <script>
+
+
+        function myFunction() {
+            var arr = []
+
+        var inpt = document.getElementById("input").value
+            for (let q = 1; q <= inpt; q++) {
+                arr.push(q)
+
+            }
+
+            function xs(v) {
+                function zim(x) {
+                    f = Number(x)
+                    if (f == 1 || f == 0) {
+                        return 1
+                    } else {
+                        return f * zim(x - 1)
+                    }
+                }
+
+
+                z = v.toString().split("")
+
+                t = z.map(zim)
+
+
+                var sum = 0
+                for (let j of t) {
+                    sum += j
+                }
+
+                if (sum == v) {
+
+                    return sum
+                }
+                return
+            }
+
+
+            v = arr.map(xs)
+            var sum1 = ''
+            for (let nm of v) {
+                if (typeof nm == "number") {
+                    console.log(nm);
+                    let nm1 = nm + '<br>'
+                    sum1 += nm1
+                    
+                }
+                
+            }
+            document.getElementById("result").innerHTML = sum1
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>

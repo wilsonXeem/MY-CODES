@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+//         let promiseTocleanTheRoom = new Promise(function (resolve, reject){
+
+//             let error = true;
+
+//             if (!error) {
+//                 resolve("clean");
+//             }
+//             else {
+//                 reject('Not clean');
+//             }
+
+//         });
+
+//         promiseTocleanTheRoom.then(function(fromResolve){
+//             console.log("The room is " + fromResolve);
+
+//         }).catch(function(fromReject){
+//             console.log("The room is " + fromReject);
+
+//         })
+
+
+//         let cleanTheRoom = function() {
+//             return new Promise(function(resolve, reject){
+//                 resolve ("The room is clean")
+//             })
+//         }
+
+//         let cleanTheGabbage = function(message) {
+//             return new Promise (function(resolve, reject){
+//                 resolve(message + "You have cleaned the gabbage")
+//             })
+//         }
+
+//         let youWinTheIceCream = function (message){
+//             return new Promise (function(resolve, reject){
+//                 resolve(message + "you have won the ice cream")
+//             }) 
+//         }
+
+//         cleanTheRoom().then(function(result){
+//             return cleanTheGabbage(result)
+//         }).then(function(result){
+//             return youWinTheIceCream(result)
+//         }).then(function(result){
+//             console.log(result + "All the task are complete");
+
+//         })
+
+//         Promise.all([cleanTheRoom(), cleanTheGabbage(), youWinTheIceCream()]).then(function(){
+//             console.log("all the promises are completed");
+
+//         })
+//         Promise.race([cleanTheRoom(), cleanTheGabbage(), youWinTheIceCream()]).then(function(){
+//             console.log("One of the promises are completed");
+
+//         })
+
+// function zim(x) {
+
+//     setTimeout(()=>{
+//         setTimeout(()=>{
+//             setTimeout(()=>{
+//                 console.log(x);
+
+//             }, 1000)
+//         }, 1000)
+//     }, 1000)
+// }
+
+// zim(3)
+// class Zim {
+//     constructor(name, age) {
+//         this.age = age;
+//         this.name = name;
+//     }
+
+//     static
+//     printName(obj) {
+//         console.log(obj.name);
+//     }
+// }
+
+// var zimc1 = new Zim("Zim", 21)
+// Zim.printName(zimc1)
+
+// function zim(name, age){
+//     this.name = name;
+//     this.age = age;
+// }
+
+// zim.prototype.printName = function() {
+//     console.log(this.name);
+
+// }
+
+// var zim1 = new zim("Zim", 21)
+// zim1.printName()
+
+
+
+
+
+// const posts = [
+//     {title: 'post one', body: 'this is post one'},
+//     {title: 'post two', body: 'this is post two'}
+// ]
+
+// function getPosts() {
+//     setTimeout(() => {
+//         let output = ''
+
+//         posts.forEach((post, index) => {
+//             output += `<li>${post.title}</li>`
+//         })
+//         console.log(output);
+        
+//         document.body.innerHTML = output
+//     }, 1000)
+// }
+
+// function createPost(post) {
+//     return new Promise((resolve, reject) => {
+
+//         setTimeout(() => {
+//         posts.push(post)
+        
+//         const error = false
+    
+//         if (!error) {
+//             resolve()
+//         }else {
+//             reject('something went wrong')
+//         }
+//     }, 2000)
+
+//     })
+// }
+
+// getPosts()
+
+
+// createPost({title: 'post three', body: 'this is post three'}).then(getPosts).catch(err => console.log(err))
+
+// var randomHex = function (len) {
+//     var maxlen = 8,
+//     min = Math.pow(16, Math.min(len, maxlen) - 1),
+//     max = Math.pow(16, Math.min(len, maxlen)) - 1,
+//     n = Math.floor(Math.random() * (max-min+1)) + min,
+//     r = n.toString()
+//     while (r.length < len) {
+//         r = r + randomHex(len - maxlen)
+//     }
+//     return r
+// }
+
+//     console.log(randomHex(24));
+
+generateHex = () => {
+    const digits = [1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f']
+
+    let hexcode = "5"
+
+    while(hexcode.length < 24) {
+        hexcode += (Math.round(Math.random() * 15)).toString(16)
+    }
+    return hexcode
+}
+var num = generateHex()
+console.log(num)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
